@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loadd()">
+    <main>
+        <div id="hh">
+            <img src="./image 3.jpg" width="300px" height="300px" id="bvb" alt=""> 
+            
+        </div>
+        <button onclick="previ()">Previous</button>
+        <button onclick="nextt()">Next</button>
+    </main>
+</body>
+</html>
+<script>
+    let shhh = document.getElementById("bvb")
+    let array = ["./images 2.png", "./image1.jpg", "./image 3.jpg"]
+    console.log(array);
+    let count = 0;
+    function nextt() {
+   shhh.setAttribute("src", array[count])
+        count++
+        if(count == 3){
+            count = 0;
+        };
+        
+    }
+    function previ() {
+        shhh.setAttribute("src", array[count])
+        count--
+        if (count == 0) {
+            count = 2;
+        };
+    }
+    function loadd() {
+        setInterval(() => {
+            shhh.setAttribute("src", array[count])
+        }, interval);
+    }
+</script>
